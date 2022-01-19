@@ -22,3 +22,11 @@
 
 command1 = "switchport trunk allowed vlan 1,2,3,5,8"
 command2 = "switchport trunk allowed vlan 1,3,8,9"
+
+command1 = command1.replace(',', ' ').split()
+command2 = command2.replace(',', ' ').split()
+# каждый список проверяется, цифра ли это, и если да - из них формируется новый список
+vlan_list1 = {int(vlan) for vlan in command1 if vlan.isdigit()}
+vlan_list2 = {int(vlan) for vlan in command2 if vlan.isdigit()}
+inter = sorted(list(vlan_list1.intersection(vlan_list2)))
+print(inter)

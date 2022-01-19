@@ -50,3 +50,8 @@ london_co = {
         "routing": True,
     },
 }
+name = input('Введите имя устройства:')
+params = ", ".join(london_co[name].keys())
+
+key = input('Введите имя параметра ({}):'.format(params))
+print(london_co[name][key])

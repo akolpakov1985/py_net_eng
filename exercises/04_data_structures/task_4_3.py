@@ -22,3 +22,6 @@
 """
 
 config = "switchport trunk allowed vlan 1,3,10,20,30,100"
+command_list = config.replace(',',' ').split()
+vlan_list = [str(vlan) for vlan in command_list if vlan.isdigit()]
+print(vlan_list)
