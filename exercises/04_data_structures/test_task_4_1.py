@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append("..")
+sys.path.append("E:\Projects\Python\pyneng\py_net_eng")
 
 from pyneng_common_functions import check_pytest
 
