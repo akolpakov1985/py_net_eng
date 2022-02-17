@@ -39,3 +39,9 @@ interface Ethernet0/3
 ...
 
 """
+
+with open("E:\Projects\Python\pyneng\py_net_eng\exercises\\07_files\config_sw1.txt", 'r') as file:
+    for line in file:
+        if not line.startswith("!"):
+            print(line.rstrip())
+
